@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
 
 class client {
 	
@@ -123,6 +125,6 @@ class client {
 		$req->bindParam(':ville', $ville, PDO::PARAM_STR);
 		$req->bindParam(':tel', $tel, PDO::PARAM_STR);
 		return $req->execute();
-
+		var_dump($sql);
 	}
 }
